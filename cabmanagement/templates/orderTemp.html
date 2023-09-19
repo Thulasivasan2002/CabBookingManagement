@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <ul>
+            <h1>ascending</h1>
+            {% for x in customers %}
+            <li> {{x.name}} </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <h1>descending</h1>
+            {% for x in customer %}
+            <li> {{x.name}} </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <h1>excluding</h1>
+            {% for x in excluder %}
+            <li> {{x.name}}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <h1>filter using Q</h1>
+            {% for x in Quser %}
+            <li> {{x.name}} </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <h1>value list</h1>
+            {% for x in Quser %}
+            <li> {{x.name}} </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

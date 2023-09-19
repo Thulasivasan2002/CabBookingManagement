@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech to Text</title>
+</head>
+<body>
+    <h1>Convert Audio to Text</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="audio_file" accept="audio/*" required>
+        <button type="submit">Convert</button>
+    </form>
+    {% if transcripts %}
+        <h2>Transcripts:</h2>
+        <ul>
+            {% for transcript in transcripts %}
+                <li>{{ transcript }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

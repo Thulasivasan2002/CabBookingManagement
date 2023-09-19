@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Drivers List</h1>
+  
+<ul>
+  {% for x in alldrivers %}
+    <li><a href="detials/{{x.driver_id}}" >{{ x.name }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

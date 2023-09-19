@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>
+            Cab Models
+        </h1>
+    </head>
+    <body>
+        <h2>
+            models
+        </h2>
+        <ul>
+            {% for x in models %}
+            <li>
+                {{x.driver}},{{x.make}}{{x.model}}
+            </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
