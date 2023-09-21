@@ -16,7 +16,7 @@ class Trip(BaseModel):
     booking = models.ForeignKey(Booking,on_delete=models.SET_NULL,blank=True,null=True)
 
     def __str__(self):
-            return str(self.id)+"==="#+self.customer.user.first_name
+            return str(self.id)+"==="+self.customer.user.first_name
 
 
     

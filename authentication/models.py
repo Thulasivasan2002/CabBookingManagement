@@ -16,5 +16,5 @@ class UserAuthentication(BaseModel):
     is_driver = models.BooleanField(default=False)
     mobile_otp = models.CharField(max_length=5,null=True,blank=True)
     def __str__(self):
-        return f'{self.user.first_name}'
+        return f'{self.user.first_name}==={self.id}==={self.is_driver}'
     
