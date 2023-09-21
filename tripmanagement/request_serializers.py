@@ -14,10 +14,10 @@ class TripValidationSerializer(serializers.Serializer):
 
 class ReviewValidationSerializer(serializers.Serializer):
     customer_name = serializers.CharField(required = True)
-    # review_text = serializers.CharField(required = True)
-    # rating = serializers.IntegerField(required = True)
-    # date_posted = serializers.DateField(required = True)
-    # trip_id = serializers.UUIDField(required = True)
+    review_text = serializers.CharField(required = True)
+    rating = serializers.IntegerField(required = True)
+    date_posted = serializers.DateField(required = True)
+    trip_id = serializers.UUIDField(required = True)
     # cab_service_id  = serializers.ListField(child = serializers.IntegerField(),allow_empty = False)
     # def validate_cab_service_id(self, value):
     #     if len(value) < 4:

@@ -10,10 +10,10 @@ from django.db import models
 #     is_available = serializers.BooleanField(required = False)
 
 class UserInfoValidationSerializer(serializers.Serializer):
-    # name = serializers.CharField(required = True)
-    # contact_number = serializers.IntegerField(required = True)
+    name = serializers.CharField(required = True)
+    contact_number = serializers.IntegerField(required = True)
     email = serializers.EmailField(required = True)
-    # address = serializers.CharField(required = True) 
+    address = serializers.CharField(required = True) 
     
 class CabValidationSerializer(serializers.Serializer):
     make = serializers.CharField(required = True)
@@ -25,11 +25,11 @@ class CabValidationSerializer(serializers.Serializer):
     
     
 class BookingValidationSerializer(serializers.Serializer):
-    # date_booked = serializers.DateTimeField(required = True)
-    # start_location = serializers.CharField(required = True)
-    # end_location = serializers.CharField(required = True)
-    # start_time = serializers.TimeField(required = True)
-    # end_time = serializers.TimeField(required = True)    
+    date_booked = serializers.DateTimeField(required = True)
+    start_location = serializers.CharField(required = True)
+    end_location = serializers.CharField(required = True)
+    start_time = serializers.TimeField(required = True)
+    end_time = serializers.TimeField(required = True)    
     customer_info_id = serializers.UUIDField(required = True)
-    # cab_id = serializers.UUIDField(required = True)
+    cab_id = serializers.UUIDField(required = True)
        
