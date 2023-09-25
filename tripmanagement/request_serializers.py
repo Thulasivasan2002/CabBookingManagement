@@ -1,4 +1,11 @@
 from rest_framework import serializers
+from cabmanagement.models import *
+from .models import *
+class ReviewCabSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cab
+        fields = '__all__'
+    
 
 
 class TripValidationSerializer(serializers.Serializer):
@@ -17,10 +24,18 @@ class ReviewValidationSerializer(serializers.Serializer):
     review_text = serializers.CharField(required = True)
     rating = serializers.IntegerField(required = True)
     date_posted = serializers.DateField(required = True)
-    trip_id = serializers.UUIDField(required = True)
+    trip_id = serializers.UUIDField(required = False)
     # cab_service_id  = serializers.ListField(child = serializers.IntegerField(),allow_empty = False)
-    # def validate_cab_service_id(self, value):
-    #     if len(value) < 4:
-    #         raise serializers.ValidationError("You must select at least 2 tags for an article.")
-    #     return value
+    # # def validate_cab_service_id(self, value):
+    # #     if len(value) < 4:
+    # #         raise serializers.ValidationError("You must select at least 2 tags for an article.")
+    # #     return value
+    # cab_service_id = ReviewCabSerializer(required = False)
+    # class Meta:
+    #     model = Review
+    #     fields = '__all__'
+
+
+
+
         

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from google.cloud import speech
+# from google.cloud import speech
 # from django.http import HttpResponse
 # from django.views.decorators.csrf import csrf_exempt
 # from django.template import loader

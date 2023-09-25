@@ -10,7 +10,7 @@ from django.db import models
 #     is_available = serializers.BooleanField(required = False)
 
 class UserInfoValidationSerializer(serializers.Serializer):
-    name = serializers.CharField(required = True)
+    license_number = serializers.CharField(required = True)
     contact_number = serializers.IntegerField(required = True)
     email = serializers.EmailField(required = True)
     address = serializers.CharField(required = True) 
